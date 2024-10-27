@@ -22,7 +22,7 @@ const Formulario = () => {
                 const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${search.toLowerCase()}`);
 
                 if (!response.ok) {
-                    throw new Error(' Pokémon no encontrado');
+                    throw new Error(' Pokemon no encontrado');
                 }
 
                 const data = await response.json();
@@ -50,7 +50,7 @@ const Formulario = () => {
         <>
             <h1>Buscar Pokémon</h1>
             <form className={styles.form} onSubmit={handleSubmit}>
-                <label htmlFor="search">Escribe un nombre de Pokémon</label>
+                <label htmlFor="search">Escribe un nombre de Pokemon</label>
                 <input
                     id="search"
                     name="search"
